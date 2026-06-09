@@ -564,17 +564,22 @@ function Index() {
                 <div>
                   <div className="text-sm font-semibold text-[#0A1F5C]">Visit us</div>
                   <div className="text-sm text-[#0A1F5C]/70">
-                    Mt Fletcher / Tlokweng, Eastern Cape
+                    Mpharane, Mount Fletcher, Eastern Cape
                   </div>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-0.5 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#0A1F5C] text-white">
+                <span className="mt-0.5 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white">
                   <Phone className="h-5 w-5" />
                 </span>
                 <div>
                   <div className="text-sm font-semibold text-[#0A1F5C]">Call us</div>
-                  <div className="text-sm text-[#0A1F5C]/70">Available on request</div>
+                  <a
+                    href="tel:+27790573688"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-[#25D366] hover:underline"
+                  >
+                    +27 79 057 3688
+                  </a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
@@ -649,6 +654,40 @@ function Index() {
         </div>
       </section>
 
+      {/* Map */}
+      <section className="px-4 sm:px-6 py-12 sm:py-16 bg-white">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center mb-8">
+            <h3 className="text-xl sm:text-2xl font-bold text-[#0A1F5C]">Find Us</h3>
+            <p className="mt-2 text-sm text-[#0A1F5C]/70">Mpharane, Mount Fletcher, Eastern Cape</p>
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-lg border border-[#0A1F5C]/10">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.5!2d28.3!3d-30.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDQyJzAwLjAiUYjDQsKwMTgnMDAuMCJF!5e0!3m2!1sen!2sza!4v1600000000000!5m2!1sen!2sza"
+              width="100%"
+              height="350"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Tlotliso Divisions Location"
+              className="w-full"
+            />
+          </div>
+          <div className="mt-6 text-center">
+            <a
+              href="https://www.google.com/maps/search/Mpharane+Mount+Fletcher+Eastern+Cape"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-[#0A1F5C] px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-[#0A1F5C]/90"
+            >
+              <MapPin className="h-4 w-4" />
+              Open in Google Maps
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t border-[#0A1F5C]/10 bg-white px-4 sm:px-6 py-10">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
@@ -659,7 +698,7 @@ function Index() {
             </span>
           </div>
           <div className="text-xs text-[#0A1F5C]/60">
-            Enterprise No. 2025/939200/07 · Mt Fletcher, Eastern Cape
+            Enterprise No. 2025/939200/07 · Mpharane, Mount Fletcher
           </div>
         </div>
       </footer>
