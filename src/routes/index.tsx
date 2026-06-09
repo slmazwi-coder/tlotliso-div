@@ -71,7 +71,7 @@ const divisions = [
     title: "Shuttle Services",
     desc: "Safe, professional passenger shuttles for groups, staff and events.",
     points: ["Group transfers", "Daily commuter", "Event shuttles"],
-    image: "events_rentals/IMG-20260608-WA0024.jpg",
+    image: "shuttle/Crop800x600.jpeg",
     link: "/shuttle",
   },
   {
