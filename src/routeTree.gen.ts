@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ShuttleRouteImport } from './routes/shuttle'
 import { Route as LogisticsRouteImport } from './routes/logistics'
+import { Route as FirewoodRouteImport } from './routes/firewood'
 import { Route as EventsRentalsRouteImport } from './routes/events-rentals'
 import { Route as ConstructionMaterialsRouteImport } from './routes/construction-materials'
 import { Route as IndexRouteImport } from './routes/index'
@@ -23,6 +24,11 @@ const ShuttleRoute = ShuttleRouteImport.update({
 const LogisticsRoute = LogisticsRouteImport.update({
   id: '/logistics',
   path: '/logistics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FirewoodRoute = FirewoodRouteImport.update({
+  id: '/firewood',
+  path: '/firewood',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EventsRentalsRoute = EventsRentalsRouteImport.update({
@@ -45,6 +51,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/construction-materials': typeof ConstructionMaterialsRoute
   '/events-rentals': typeof EventsRentalsRoute
+  '/firewood': typeof FirewoodRoute
   '/logistics': typeof LogisticsRoute
   '/shuttle': typeof ShuttleRoute
 }
@@ -52,6 +59,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/construction-materials': typeof ConstructionMaterialsRoute
   '/events-rentals': typeof EventsRentalsRoute
+  '/firewood': typeof FirewoodRoute
   '/logistics': typeof LogisticsRoute
   '/shuttle': typeof ShuttleRoute
 }
@@ -60,6 +68,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/construction-materials': typeof ConstructionMaterialsRoute
   '/events-rentals': typeof EventsRentalsRoute
+  '/firewood': typeof FirewoodRoute
   '/logistics': typeof LogisticsRoute
   '/shuttle': typeof ShuttleRoute
 }
@@ -69,6 +78,7 @@ export interface FileRouteTypes {
     | '/'
     | '/construction-materials'
     | '/events-rentals'
+    | '/firewood'
     | '/logistics'
     | '/shuttle'
   fileRoutesByTo: FileRoutesByTo
@@ -76,6 +86,7 @@ export interface FileRouteTypes {
     | '/'
     | '/construction-materials'
     | '/events-rentals'
+    | '/firewood'
     | '/logistics'
     | '/shuttle'
   id:
@@ -83,6 +94,7 @@ export interface FileRouteTypes {
     | '/'
     | '/construction-materials'
     | '/events-rentals'
+    | '/firewood'
     | '/logistics'
     | '/shuttle'
   fileRoutesById: FileRoutesById
@@ -91,6 +103,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ConstructionMaterialsRoute: typeof ConstructionMaterialsRoute
   EventsRentalsRoute: typeof EventsRentalsRoute
+  FirewoodRoute: typeof FirewoodRoute
   LogisticsRoute: typeof LogisticsRoute
   ShuttleRoute: typeof ShuttleRoute
 }
@@ -109,6 +122,13 @@ declare module '@tanstack/react-router' {
       path: '/logistics'
       fullPath: '/logistics'
       preLoaderRoute: typeof LogisticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/firewood': {
+      id: '/firewood'
+      path: '/firewood'
+      fullPath: '/firewood'
+      preLoaderRoute: typeof FirewoodRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/events-rentals': {
@@ -139,6 +159,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ConstructionMaterialsRoute: ConstructionMaterialsRoute,
   EventsRentalsRoute: EventsRentalsRoute,
+  FirewoodRoute: FirewoodRoute,
   LogisticsRoute: LogisticsRoute,
   ShuttleRoute: ShuttleRoute,
 }
