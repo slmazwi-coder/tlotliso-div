@@ -71,7 +71,7 @@ const divisions = [
     title: "Shuttle Services",
     desc: "Safe, professional passenger shuttles for groups, staff and events.",
     points: ["Group transfers", "Daily commuter", "Event shuttles"],
-    image: "shuttle/shuttle-placeholder.jpg",
+    image: "events_rentals/IMG-20260608-WA0024.jpg",
     link: "/shuttle",
   },
   {
@@ -79,7 +79,7 @@ const divisions = [
     title: "Firewood Supply",
     desc: "Premium, dry firewood neatly packaged and ready for your hearth or braai.",
     points: ["Dry & seasoned", "Neatly packaged", "Various sizes"],
-    image: "firewood/firewood.jpg",
+    image: "events_rentals/IMG-20260608-WA0025.jpg",
     link: "/firewood",
   },
 ];
