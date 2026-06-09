@@ -79,7 +79,7 @@ const divisions = [
     title: "Firewood Supply",
     desc: "Premium, dry firewood neatly packaged and ready for your hearth or braai.",
     points: ["Dry & seasoned", "Neatly packaged", "Various sizes"],
-    image: "events_rentals/IMG-20260608-WA0025.jpg",
+    image: "firewood/images%20(1).jpeg",
     link: "/firewood",
   },
 ];
