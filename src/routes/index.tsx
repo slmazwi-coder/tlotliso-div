@@ -18,15 +18,16 @@ import {
   Clock,
   Sparkles,
   MessageCircle,
+  Flame,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Tlotliso Divisions — One Stop Rentals" },
-      { name: "description", content: "Tlotliso Divisions: event rentals, construction materials, logistics and shuttle services in Mt Fletcher, Eastern Cape." },
+      { name: "description", content: "Tlotliso Divisions: event rentals, construction materials, logistics, shuttle and firewood services in Mt Fletcher, Eastern Cape." },
       { property: "og:title", content: "Tlotliso Divisions — One Stop Rentals" },
-      { property: "og:description", content: "Event rentals, construction materials, logistics and shuttle services in Mt Fletcher, Eastern Cape." },
+      { property: "og:description", content: "Event rentals, construction materials, logistics, shuttle and firewood services in Mt Fletcher, Eastern Cape." },
       { property: "og:image", content: LOGO_URL },
     ],
   }),
@@ -70,13 +71,21 @@ const divisions = [
     title: "Shuttle Services",
     desc: "Safe, professional passenger shuttles for groups, staff and events.",
     points: ["Group transfers", "Daily commuter", "Event shuttles"],
-    image: "events_rentals/IMG-20260608-WA0024.jpg",
+    image: "shuttle/shuttle-placeholder.jpg",
     link: "/shuttle",
+  },
+  {
+    icon: Flame,
+    title: "Firewood Supply",
+    desc: "Premium, dry firewood neatly packaged and ready for your hearth or braai.",
+    points: ["Dry & seasoned", "Neatly packaged", "Various sizes"],
+    image: "firewood/firewood.jpg",
+    link: "/firewood",
   },
 ];
 
 const stats = [
-  { value: "4", label: "Divisions, one promise" },
+  { value: "5", label: "Divisions, one promise" },
   { value: "100%", label: "Locally owned" },
   { value: "24/7", label: "Booking support" },
 ];
@@ -293,7 +302,7 @@ function Index() {
           transition={{ delay: 0.45, duration: 0.6 }}
           className="mt-6 max-w-2xl px-2 text-base sm:text-xl md:text-2xl leading-relaxed text-[#0A1F5C]/80"
         >
-          Four divisions. One promise. <span className="font-semibold text-[#0A1F5C]">Excellence elevated</span> across construction, events, logistics and shuttles.
+          Five divisions. One promise. <span className="font-semibold text-[#0A1F5C]">Excellence elevated</span> across construction, events, logistics, shuttles and firewood.
         </motion.p>
 
         <motion.div
@@ -349,7 +358,7 @@ function Index() {
               What we do
             </span>
             <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#0A1F5C]">
-              Four divisions, one trusted partner
+              Five divisions, one trusted partner
             </h2>
             <p className="mt-4 text-base sm:text-lg text-[#0A1F5C]/70">
               Whatever you're building, celebrating, moving or travelling for —
