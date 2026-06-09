@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { WhatsAppFloatingButton } from "../components/WhatsAppFloatingButton";
 
 function NotFoundComponent() {
   return (
@@ -107,6 +108,7 @@ function RootShell({ children }: { children: ReactNode }) {
       </head>
       <body>
         {children}
+        <WhatsAppFloatingButton />
         <Scripts />
       </body>
     </html>

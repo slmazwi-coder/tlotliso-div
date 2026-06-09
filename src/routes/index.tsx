@@ -17,6 +17,7 @@ import {
   ShieldCheck,
   Clock,
   Sparkles,
+  MessageCircle,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -34,6 +35,10 @@ export const Route = createFileRoute("/")({
 
 const NAVY = "#0A1F5C";
 const RED = "#CC2228";
+
+const whatsappNumber = "27790573688";
+const whatsappMessage = encodeURIComponent("Hi Tlotliso, I'd like to get a quote for your services.");
+const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
 const divisions = [
   {
@@ -170,10 +175,13 @@ function Index() {
               ))}
             </ul>
             <a
-              href="#contact"
-              className="inline-flex items-center gap-2 rounded-full bg-[#CC2228] px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-[#CC2228]/20 transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#CC2228]/30"
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-[#25D366]/20 transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#25D366]/30"
             >
-              Get a quote <ArrowRight className="h-4 w-4" />
+              <MessageCircle className="h-4 w-4" />
+              Get a quote
             </a>
           </div>
 
@@ -200,11 +208,14 @@ function Index() {
               ))}
               <li className="pt-2">
                 <a
-                  href="#contact"
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setMenuOpen(false)}
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#CC2228] px-5 py-3 text-sm font-semibold text-white"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold text-white"
                 >
-                  Get a quote <ArrowRight className="h-4 w-4" />
+                  <MessageCircle className="h-4 w-4" />
+                  Get a quote
                 </a>
               </li>
             </ul>

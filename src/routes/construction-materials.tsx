@@ -41,7 +41,7 @@ const inventory = [
   { name: "19mm Stone", size: "Bulk bags or load" },
 ];
 
-const whatsappNumber = "27812345678";
+const whatsappNumber = "27790573688";
 const message = encodeURIComponent("Hi Tlotliso, I'd like to get a quote for construction materials.");
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
 
