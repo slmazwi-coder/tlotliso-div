@@ -3,7 +3,7 @@ name: Deploy to Host Africa
 on:
   push:
     branches:
-      - main
+      - masters
 
 jobs:
   deploy:
