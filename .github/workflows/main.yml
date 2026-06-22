@@ -25,11 +25,14 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: List build output
+        run: find . -name "index.html" -not -path "*/node_modules/*"
+
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/
+          local-dir: ./.output/public/
           server-dir: /public_html/
