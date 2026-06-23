@@ -41,10 +41,9 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
+          username: deploy@tlotlisodivisions.co.za
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./.output/public/
           server-dir: /home/tlotliso/domains/tlotlisodivisions.co.za/public_html/
-          protocol: ftps-legacy
+          protocol: ftp
           port: 21
-          security: loose
