@@ -40,10 +40,10 @@ jobs:
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          server: host-ww.net
+          username: deploy@tlotlisodivisions.co.za
+          password: Deploy@2024!
           local-dir: ./.output/public/
           server-dir: /home/tlotliso/domains/tlotlisodivisions.co.za/public_html/
-          protocol: ftp
+          protocol: ftps
           port: 21
