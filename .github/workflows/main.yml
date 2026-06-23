@@ -37,7 +37,7 @@ jobs:
       - name: List build output
         run: find . -name "index.html" -not -path "*/node_modules/*"
 
-      - name: Deploy via FTP
+      - name: Deploy via SFTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -45,5 +45,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./.output/public/
           server-dir: /home/tlotliso/domains/tlotlisodivisions.co.za/public_html/
-          protocol: ftps
-          port: 21
+          protocol: sftp
+          port: 22
