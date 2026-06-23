@@ -47,4 +47,4 @@ jobs:
           server-dir: /home/tlotliso/domains/tlotlisodivisions.co.za/public_html/
           protocol: ftps-legacy
           port: 21
-          security: tls
+          security: strict
