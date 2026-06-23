@@ -5,14 +5,6 @@ on:
     branches:
       - main
   workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'
-        required: false
-        default: 'warning'
-
-permissions:
-  contents: read
 
 jobs:
   deploy:
@@ -20,16 +12,15 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
           node-version: '22'
-          cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build project
         run: npm run build
@@ -37,13 +28,13 @@ jobs:
       - name: List build output
         run: find . -name "index.html" -not -path "*/node_modules/*"
 
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Deploy via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./.output/public/
-          server-dir: /home/tlotliso/domains/tlotlisodivisions.co.za/public_html/
-          protocol: ftp
-          port: 21
+          port: 22
+          local_path: ./.output/public/*
+          remote_path: /home/tlotliso/domains/tlotlisodivisions.co.za/public_html/
+          sftp_only: true
