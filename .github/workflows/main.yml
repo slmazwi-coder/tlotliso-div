@@ -45,6 +45,5 @@ jobs:
           password: Deploy@2024!
           local-dir: ./.output/public/
           server-dir: /home/tlotliso/domains/tlotlisodivisions.co.za/public_html/
-          protocol: ftps-legacy
-          port: 21
-          security: loose
+          protocol: ftps
+          port: 990
