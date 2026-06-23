@@ -45,6 +45,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./.output/public/
           server-dir: /home/tlotliso/domains/tlotlisodivisions.co.za/public_html/
-          protocol: ftps
+          protocol: ftp
           port: 21
-          security: loose
