@@ -5,8 +5,12 @@ import { HardHat, ArrowLeft, MessageCircle, Check } from "lucide-react";
 export const Route = createFileRoute("/construction-materials")({
   head: () => ({
     meta: [
-      { title: "Construction Materials - Tlotliso Divisions" },
-      { name: "description", content: "Bricks, sand, stone and core supply for builders across the Eastern Cape." },
+      { title: "Construction Materials in Mt Fletcher | Tlotliso Divisions" },
+      { name: "description", content: "Bricks, sand, stone and bulk aggregate supply for builders in Mt Fletcher and the Eastern Cape. Fast delivery. Locally owned." },
+      { property: "og:title", content: "Construction Materials in Mt Fletcher | Tlotliso Divisions" },
+      { property: "og:description", content: "Bricks, sand, stone and bulk aggregate supply for builders in Mt Fletcher and the Eastern Cape. Fast delivery. Locally owned." },
+      { name: "twitter:title", content: "Construction Materials in Mt Fletcher | Tlotliso Divisions" },
+      { name: "twitter:description", content: "Bricks, sand, stone and bulk aggregate supply for builders in Mt Fletcher and the Eastern Cape. Fast delivery. Locally owned." },
     ],
   }),
   component: ConstructionMaterials,

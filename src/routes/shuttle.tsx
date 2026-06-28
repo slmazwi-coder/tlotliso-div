@@ -5,8 +5,12 @@ import { Bus, ArrowLeft, MessageCircle, Check } from "lucide-react";
 export const Route = createFileRoute("/shuttle")({
   head: () => ({
     meta: [
-      { title: "Shuttle Services - Tlotliso Divisions" },
-      { name: "description", content: "Safe, professional passenger shuttles for groups, staff and events." },
+      { title: "Shuttle Services in Mt Fletcher | Tlotliso Divisions" },
+      { name: "description", content: "Safe group transfers, daily commuter and event shuttles in Mt Fletcher and surrounding areas. Book 24/7." },
+      { property: "og:title", content: "Shuttle Services in Mt Fletcher | Tlotliso Divisions" },
+      { property: "og:description", content: "Safe group transfers, daily commuter and event shuttles in Mt Fletcher and surrounding areas. Book 24/7." },
+      { name: "twitter:title", content: "Shuttle Services in Mt Fletcher | Tlotliso Divisions" },
+      { name: "twitter:description", content: "Safe group transfers, daily commuter and event shuttles in Mt Fletcher and surrounding areas. Book 24/7." },
     ],
   }),
   component: Shuttle,

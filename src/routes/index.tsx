@@ -24,11 +24,14 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Tlotliso Divisions — One Stop Rentals" },
-      { name: "description", content: "Tlotliso Divisions: event rentals, construction materials, logistics, shuttle and firewood services in Mt Fletcher, Eastern Cape." },
-      { property: "og:title", content: "Tlotliso Divisions — One Stop Rentals" },
-      { property: "og:description", content: "Event rentals, construction materials, logistics, shuttle and firewood services in Mt Fletcher, Eastern Cape." },
+      { title: "Tlotliso Divisions | Construction, Events, Logistics & Shuttles in Mt Fletcher" },
+      { name: "description", content: "Tlotliso Divisions offers construction materials, event rentals, logistics, shuttle services and firewood supply in Mt Fletcher and the Eastern Cape. Locally owned. One call does it all." },
+      { property: "og:title", content: "Tlotliso Divisions | One Stop Rentals & Services — Mt Fletcher, Eastern Cape" },
+      { property: "og:description", content: "Construction materials, event rentals, logistics, shuttles and firewood in Mt Fletcher. Registered enterprise. 24/7 booking support." },
       { property: "og:image", content: LOGO_URL },
+      { name: "twitter:title", content: "Tlotliso Divisions | Mt Fletcher, Eastern Cape" },
+      { name: "twitter:description", content: "Construction, events, logistics, shuttles and firewood — one trusted partner in the Eastern Cape." },
+      { name: "twitter:image", content: LOGO_URL },
     ],
   }),
   component: Index,

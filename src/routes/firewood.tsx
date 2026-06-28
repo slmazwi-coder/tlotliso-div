@@ -5,8 +5,12 @@ import { Flame, ArrowLeft, MessageCircle, Check } from "lucide-react";
 export const Route = createFileRoute("/firewood")({
   head: () => ({
     meta: [
-      { title: "Firewood Supply - Tlotliso Divisions" },
-      { name: "description", content: "Premium, dry firewood neatly packaged and ready for your hearth or braai." },
+      { title: "Firewood Supply in Mt Fletcher | Tlotliso Divisions" },
+      { name: "description", content: "Dry, seasoned firewood neatly packaged and delivered in Mt Fletcher. Ideal for home heating and braais." },
+      { property: "og:title", content: "Firewood Supply in Mt Fletcher | Tlotliso Divisions" },
+      { property: "og:description", content: "Dry, seasoned firewood neatly packaged and delivered in Mt Fletcher. Ideal for home heating and braais." },
+      { name: "twitter:title", content: "Firewood Supply in Mt Fletcher | Tlotliso Divisions" },
+      { name: "twitter:description", content: "Dry, seasoned firewood neatly packaged and delivered in Mt Fletcher. Ideal for home heating and braais." },
     ],
   }),
   component: Firewood,

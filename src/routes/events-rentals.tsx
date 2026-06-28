@@ -5,8 +5,12 @@ import { PartyPopper, ArrowLeft, MessageCircle, Check } from "lucide-react";
 export const Route = createFileRoute("/events-rentals")({
   head: () => ({
     meta: [
-      { title: "Event Rentals - Tlotliso Divisions" },
-      { name: "description", content: "Tents, tables, chairs, décor and inflatables to make any occasion shine." },
+      { title: "Event Tent & Chair Rentals in Mt Fletcher | Tlotliso Divisions" },
+      { name: "description", content: "Tents, marquees, tables, chairs, décor and inflatables for hire in Mt Fletcher. Perfect for weddings, funerals and community events." },
+      { property: "og:title", content: "Event Tent & Chair Rentals in Mt Fletcher | Tlotliso Divisions" },
+      { property: "og:description", content: "Tents, marquees, tables, chairs, décor and inflatables for hire in Mt Fletcher. Perfect for weddings, funerals and community events." },
+      { name: "twitter:title", content: "Event Tent & Chair Rentals in Mt Fletcher | Tlotliso Divisions" },
+      { name: "twitter:description", content: "Tents, marquees, tables, chairs, décor and inflatables for hire in Mt Fletcher. Perfect for weddings, funerals and community events." },
     ],
   }),
   component: EventRentals,

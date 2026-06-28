@@ -78,19 +78,65 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { name: "robots", content: "index, follow" },
+      { name: "author", content: "Tlotliso Divisions" },
+      { property: "og:site_name", content: "Tlotliso Divisions" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { property: "og:url", content: "https://tlotlisodivisions.co.za/" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
+        rel: "canonical",
+        href: "https://tlotlisodivisions.co.za/",
+      },
+      {
         rel: "stylesheet",
         href: appCss,
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Tlotliso Divisions",
+          "description": "Multi-service enterprise offering construction materials, event rentals, logistics solutions, shuttle services and firewood supply in Mt Fletcher and the Eastern Cape.",
+          "url": "https://tlotlisodivisions.co.za",
+          "logo": "https://tlotlisodivisions.co.za/logo/tlotliso-logo.png",
+          "telephone": "+27790573688",
+          "email": "hello@tlotliso.co.za",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Mpharane",
+            "addressLocality": "Mount Fletcher",
+            "addressRegion": "Eastern Cape",
+            "addressCountry": "ZA"
+          },
+          "areaServed": [
+            "Mount Fletcher",
+            "Matatiele",
+            "Eastern Cape"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Tlotliso Divisions Services",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Construction Materials" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Event Rentals" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Logistics Solutions" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Shuttle Services" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Firewood Supply" } }
+            ]
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "00:00",
+            "closes": "23:59"
+          }
+        }),
       },
     ],
   }),

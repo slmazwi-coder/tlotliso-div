@@ -5,8 +5,12 @@ import { Truck, ArrowLeft, MessageCircle, Check } from "lucide-react";
 export const Route = createFileRoute("/logistics")({
   head: () => ({
     meta: [
-      { title: "Logistics Solutions - Tlotliso Divisions" },
-      { name: "description", content: "Reliable freight and last-mile transport built around your timelines." },
+      { title: "Freight & Logistics Services | Tlotliso Divisions — Eastern Cape" },
+      { name: "description", content: "Reliable local and long-haul freight with tracked deliveries across the Eastern Cape. On-time guarantee from Tlotliso Divisions." },
+      { property: "og:title", content: "Freight & Logistics Services | Tlotliso Divisions — Eastern Cape" },
+      { property: "og:description", content: "Reliable local and long-haul freight with tracked deliveries across the Eastern Cape. On-time guarantee from Tlotliso Divisions." },
+      { name: "twitter:title", content: "Freight & Logistics Services | Tlotliso Divisions — Eastern Cape" },
+      { name: "twitter:description", content: "Reliable local and long-haul freight with tracked deliveries across the Eastern Cape. On-time guarantee from Tlotliso Divisions." },
     ],
   }),
   component: Logistics,
