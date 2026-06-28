@@ -80,6 +80,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "robots", content: "index, follow" },
       { name: "author", content: "Tlotliso Divisions" },
+      { name: "google-site-verification", content: "dny-_QS-_3EllPgUZ-pO9skhpxwdcP1lF3PSrrQqtgE" },
       { property: "og:site_name", content: "Tlotliso Divisions" },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://tlotlisodivisions.co.za/" },
